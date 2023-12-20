@@ -1,4 +1,4 @@
-package top.xingzhexiaohui.jointqueryupdaterbackend.mapper;
+package top.xingzhexiaohui.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

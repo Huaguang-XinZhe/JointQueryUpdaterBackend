@@ -1,4 +1,4 @@
-package top.xingzhexiaohui.jointqueryupdaterbackend.config;
+package top.xingzhexiaohui.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

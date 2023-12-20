@@ -1,4 +1,4 @@
-package top.xingzhexiaohui.jointqueryupdaterbackend;
+package top.xingzhexiaohui;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

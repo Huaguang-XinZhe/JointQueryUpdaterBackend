@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.xingzhexiaohui.mapper.ChangesMapper">
+    <update id="updateTable">
+        UPDATE ${table}
+        SET
+        /* 这里的 column 代表 updates（Map） 中的键，而 value 代表其中的值 */
+        <foreach item="value" index="column" collection="updates" separator=",">
+            ${column} = #{value}
+        </foreach>
+        WHERE id = #{id}
+    </update>
+</mapper>

@@ -1,12 +1,12 @@
-package top.xingzhexiaohui.jointqueryupdaterbackend.controller;
+package top.xingzhexiaohui.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import top.xingzhexiaohui.jointqueryupdaterbackend.dto.Result;
-import top.xingzhexiaohui.jointqueryupdaterbackend.service.SqlService;
+import top.xingzhexiaohui.dto.Result;
+import top.xingzhexiaohui.service.SqlService;
 
 import java.util.LinkedHashMap;
 import java.util.List;

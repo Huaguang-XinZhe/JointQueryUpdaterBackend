@@ -1,4 +1,4 @@
-package top.xingzhexiaohui.jointqueryupdaterbackend.dto;
+package top.xingzhexiaohui.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

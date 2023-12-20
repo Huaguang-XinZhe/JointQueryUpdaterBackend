@@ -1,8 +1,8 @@
-package top.xingzhexiaohui.jointqueryupdaterbackend.service;
+package top.xingzhexiaohui.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import top.xingzhexiaohui.jointqueryupdaterbackend.mapper.SqlMapper;
+import top.xingzhexiaohui.mapper.SqlMapper;
 
 import java.util.HashSet;
 import java.util.LinkedHashMap;
