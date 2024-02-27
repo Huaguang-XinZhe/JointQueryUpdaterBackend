@@ -1,5 +1,6 @@
 package top.xingzhexiaohui.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// 要打日志，应该用 @Slf4j 注解，而不是 @Log4j 或 @Log
+//@Log4j
+@Slf4j
 @Service
 public class ChangesService {
     @Autowired
@@ -23,6 +27,7 @@ public class ChangesService {
         Map<UpdateKey, Map<String, Object>> groupedUpdates = new HashMap<>();
 
         for (UpdateObj updateObj : updateObjs) {
+//            log.error("updateObj = " + updateObj);
             UpdateKey key = new UpdateKey(updateObj.getTable(), updateObj.getId());
             // computeIfAbsent() 方法的作用是：如果 key 不存在，则创建一个新的 value，否则返回已存在的 value
             groupedUpdates.computeIfAbsent(key, k -> new HashMap<>())
@@ -34,6 +39,7 @@ public class ChangesService {
             // 调用MyBatis映射器执行更新
             for (Map.Entry<UpdateKey, Map<String, Object>> entry : groupedUpdates.entrySet()) {
                 UpdateKey key = entry.getKey();
+//                log.error("key = " + key);
                 // 一次更新一行
                 changesMapper.updateTable(key.getTable(), key.getId(), entry.getValue());
             }
